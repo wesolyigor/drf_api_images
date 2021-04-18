@@ -5,11 +5,10 @@ from api.models import Images
 
 
 class ImageSerializer(ModelSerializer):
-    image_url = serializers.SerializerMethodField('get_image_url', read_only=True)
 
     class Meta:
         model = Images
-        fields = ('id', 'name', 'author', 'image', 'image_url')
+        fields = ('id', 'name', 'author', 'image')
         read_only_fields = ('id', 'author')
 
     def get_image_url(self, obj):
