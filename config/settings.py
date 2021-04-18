@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # my apps
     'api.apps.ApiConfig',
+    'users.apps.UsersConfig',
 
 ]
 
@@ -147,3 +148,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
+AUTH_USER_MODEL = "users.CustomUser"
+
